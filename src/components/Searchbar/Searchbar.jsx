@@ -1,6 +1,7 @@
 import css from './searchbar.module.css';
 import { Component } from 'react';
 import { CiSearch } from 'react-icons/ci';
+import PropTypes from 'prop-types';
 
 export class Searchbar extends Component {
   state = {
@@ -19,6 +20,7 @@ export class Searchbar extends Component {
     onSubmit(this.state.search);
     this.reset();
   };
+
   reset() {
     this.setState({ search: '' });
   }
@@ -40,8 +42,8 @@ export class Searchbar extends Component {
             name="search"
             className={css.SearchFormInput}
             type="text"
-            autocomplete="off"
-            autofocus
+            // autocomplete="off"
+            // autofocus
             placeholder="Search images and photos"
           />
         </form>
@@ -49,3 +51,7 @@ export class Searchbar extends Component {
     );
   }
 }
+
+Searchbar.propType = {
+  onSubmit: PropTypes.func.isRequired,
+};
