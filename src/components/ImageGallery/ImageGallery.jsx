@@ -6,15 +6,15 @@ export function ImageGallery({ images, showModal }) {
   return (
     <ul className={css.ImageGallery}>
       {console.log(images)}
-      {images.map(image => {
+      {images.map(image => (
         <ImageGalleryItem
           showModal={() => showModal(image.webformatURL)}
           key={image.id}
           id={image.id}
           imgUrl={image.webformatURL}
           title={image.tags}
-        />;
-      })}
+        />
+      ))}
     </ul>
   );
 }

@@ -17,7 +17,7 @@ export class App extends Component {
     loading: false,
     error: null,
     isMoreBtnVisible: false,
-    isModalVisible: false,
+    // isModalVisible: false,
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -31,12 +31,14 @@ export class App extends Component {
   }
 
   handlSearch = value => {
-    this.setState({
-      search: value,
-      images: [],
-      page: 1,
-      isModalVisible: false,
-    });
+    if (this.state.search !== value) {
+      this.setState({
+        search: value,
+        images: [],
+        page: 1,
+        isModalVisible: false,
+      });
+    }
   };
 
   showModal = largeImageURL => {
@@ -54,7 +56,7 @@ export class App extends Component {
   };
 
   loadMore = () => {
-    this.setState(({ page }) => ({ page: page++ }));
+    this.setState(({ page }) => ({ page: page + 1 }));
   };
 
   async fethImg() {

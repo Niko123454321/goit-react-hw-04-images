@@ -18,7 +18,7 @@ export class Searchbar extends Component {
     e.preventDefault();
     const { onSubmit } = this.props;
     onSubmit(this.state.search);
-    this.reset();
+    // this.reset();
   };
 
   reset() {
@@ -42,8 +42,8 @@ export class Searchbar extends Component {
             name="search"
             className={css.SearchFormInput}
             type="text"
-            // autocomplete="off"
-            // autofocus
+            autocomplete="off"
+            autofocus
             placeholder="Search images and photos"
           />
         </form>
