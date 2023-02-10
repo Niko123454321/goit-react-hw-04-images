@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export function ImageGallery({ images, showModal }) {
   return (
     <ul className={css.ImageGallery}>
-      {console.log(images)}
+      {/* {console.log(images)} */}
       {images.map(image => (
         <ImageGalleryItem
           showModal={() => showModal(image.webformatURL)}

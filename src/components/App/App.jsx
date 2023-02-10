@@ -23,7 +23,7 @@ export class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     // console.log('this.state ', this.state);
     // console.log('prevState ', prevState);
-    console.log('componentDidUpdate');
+    // console.log('componentDidUpdate');
     const { search, page } = this.state;
     if (prevState.search !== search || prevState.page !== page) {
       this.fethImg();
