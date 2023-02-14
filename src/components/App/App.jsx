@@ -17,7 +17,6 @@ export class App extends Component {
     loading: false,
     error: null,
     isMoreBtnVisible: false,
-    // isModalVisible: false,
   };
 
   componentDidUpdate(prevProps, prevState) {
